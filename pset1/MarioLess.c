@@ -14,13 +14,17 @@ int main(void)
     //3 for loops 2 inside 1 which isn't the best way, can you implment something better?
     for (int i = 0; i < height; i++)
     {
-        for (int j = 1; j < height - i; j++)
+        //for every line draw a space if j and i is less than the total height - 1 otherwise draw #
+        for (int j = 0; j < height; j++)
         {
-            printf(" ");
-        }
-        for (int k = -1; k < i; k++)
-        {
-            printf("#");
+            if (i + j < height - 1)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("#");
+            }
         }
         printf("\n");
     }
